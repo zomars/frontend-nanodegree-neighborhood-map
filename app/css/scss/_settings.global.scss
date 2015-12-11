@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #GLOBAL
+\*------------------------------------*/
+
+$brand-color: #000;
+$brand-round: 10px;
+$base-round:  $brand-round;
+
+$inuit-use-fractions:   false;
+
+
+
+
+
+// Predefine the namespace for all available objects
+$inuit-objects-namespace:           "o-";
+
+$inuit-list-ui-namespace:           $inuit-objects-namespace;
+$inuit-table-namespace:             $inuit-objects-namespace;
+$inuit-pack-namespace:              $inuit-objects-namespace;
+$inuit-media-namespace:             $inuit-objects-namespace;
+$inuit-tabs-namespace:              $inuit-objects-namespace;
+$inuit-flag-namespace:              $inuit-objects-namespace;
+$inuit-box-namespace:               $inuit-objects-namespace;
+$inuit-btn-namespace:               $inuit-objects-namespace;
+$inuit-list-block-namespace:        $inuit-objects-namespace;
+$inuit-list-inline-namespace:       $inuit-objects-namespace;
+$inuit-block-namespace:             $inuit-objects-namespace;
+$inuit-layout-namespace:            $inuit-objects-namespace;
+$inuit-list-bare-namespace:         $inuit-objects-namespace;
+
+
+

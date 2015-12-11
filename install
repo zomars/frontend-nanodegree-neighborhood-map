@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Before use, we need to install Node.js, Bolt.cm and Bower dependencies
+# using the following command:
+
+# Usage:
+# On root directory:
+# $ ./install
+
+echo 'Installing Node Dependencies'
+sudo npm install
+echo 'Downloading Bower Components'
+cd app
+bower install
+cd ../
+echo 'All Done!'

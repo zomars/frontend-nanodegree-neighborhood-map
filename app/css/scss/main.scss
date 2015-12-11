@@ -1,0 +1,139 @@
+/*-------------------------------------------*\
+      #PROJECT-NAME
+\*-------------------------------------------*/
+
+
+
+
+/**
+ * This file try to follow the CSS GUIDELINES http://cssguidelin.es/
+ * For more information about this file structure, refere to https://github.com/inuitcss/getting-started
+ *
+ * Thanks to Harry Roberts to share this amazing way to build good CSS :)
+ */
+
+
+
+
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Default .................inuitcss' default settings
+ * Global...................Globally-available variables and settings/config
+ * Colors...................Manage our color palette in isolation
+ *
+ * TOOLS
+ * Functions................inuitcss' default functions
+ * Mixins...................inuitcss' default mixins
+ * Mixins...................Custom mixins
+ * Aliases..................Aliases onto longer inuitcss variables and mixins
+ *
+ * GENERIC
+ * Reset....................A pared back reset to remove margins
+ * Normalize.css............A level playing field
+ * Box-sizing...............Better default 'box-sizing'
+ * Shared...................Sensibly and tersely share global commonalities
+ *
+ * BASE
+ * Page.....................Page-level styles (HTML element)
+ * Page.....................Our extension of the inuitcss page module
+ * Headings.................Heading styles
+ * Type.....................Misc type styles
+ * Links....................Hyperlink styles
+ * Forms....................Base form styles classes
+ *
+ * OBJECTS
+ * Wrappers.................Wrappers and page constraints
+ *
+ * COMPONENTS
+ *
+ * TRUMPS
+ * Clearfix.................inuitcss' clearfix for floats
+ * Widths...................Simple width helper classes
+ * Spacing..................Micro-level spacing
+ * Show/hide................Helper to show/hide stuff
+ */
+
+/**
+ * SETTINGS
+ */
+@import "../../bower_components/inuit-defaults/settings.defaults";
+@import "settings.global";
+@import "settings.colors";
+@import "../../bower_components/inuit-responsive-settings/settings.responsive";
+
+
+
+
+
+/**
+ * TOOLS
+ */
+@import "../../bower_components/inuit-functions/tools.functions";
+@import "../../bower_components/inuit-mixins/tools.mixins";
+@import "tools.mixins";
+@import "tools.aliases";
+@import "../../bower_components/inuit-tools-widths/tools.widths";
+@import "../../bower_components/inuit-responsive-tools/tools.responsive";
+
+
+
+
+
+/**
+ * GENERIC
+ */
+@import "../../bower_components/inuit-reset/generic.reset";
+@import "../../bower_components/inuit-normalize/generic.normalize";
+@import "../../bower_components/inuit-box-sizing/generic.box-sizing";
+@import "../../bower_components/inuit-shared/generic.shared";
+
+
+
+
+
+/**
+ * BASE
+ */
+@import "../../bower_components/inuit-page/base.page";
+@import "base.page";
+@import "../../bower_components/inuit-headings/base.headings";
+@import "base.type";
+@import "base.links";
+
+
+
+
+
+
+/**
+ * OBJECTS
+ */
+@import "objects.wrappers";
+
+
+
+
+
+/**
+ * COMPONENTS
+ *
+ */
+
+
+
+
+
+/**
+ * TRUMPS
+ */
+@import "../../bower_components/inuit-clearfix/trumps.clearfix";
+@import "../../bower_components/inuit-widths/trumps.widths";
+@import "../../bower_components/ancla-inuit-widths-responsive/trumps.widths-responsive";
+@import "trumps.show-hide";
+
+
+
+
