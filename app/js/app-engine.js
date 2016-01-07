@@ -254,10 +254,10 @@ function makeYelpList(d){
 
 
 // Ajax OAuth method to get yelp's data
-function yJax(url, ydata){
+function ajaxYelp(url, data){
     $.ajax({
         'url' : url,
-        'data' : ydata,
+        'data' : data,
         'dataType' : 'jsonp',
         'global' : true,
         'jsonpCallback' : 'cb',
@@ -270,7 +270,7 @@ function yJax(url, ydata){
 // This is the main function that calls to yelp
 // and updates the knockout data binds
 // as well as creating the  markers on google map.
-function yelpAjax(searchNear, searchFor) {
+function getYelpData(searchNear, searchFor) {
 
     // Details for Yelp OAuth2
     // This info would never make it to prod - it's only used right now as Proof-of-concept
@@ -313,11 +313,11 @@ function yelpAjax(searchNear, searchFor) {
 
     // OAuth proof-of-concept using JS
     var parameterMap = OAuth.getParameterMap(message.parameters);
-    yJax(message.action, parameterMap);
+    ajaxYelp(message.action, parameterMap);
 }
 
 // Initialize the google maps function
 initialize();
 
 // Call the main yelp function
-yelpAjax('92260', 'Coffee');
+getYelpData('92260', 'Coffee');
