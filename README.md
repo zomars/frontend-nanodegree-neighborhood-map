@@ -10,8 +10,8 @@ Clone the repository
 
 On the project root directory run:
 
-´´´
+```
 $ ./install
-´´´
+```
 
 -------
