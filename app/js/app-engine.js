@@ -302,7 +302,7 @@ function getYelpData(searchNear, searchFor) {
 
     // Create a JSON object "message" to pass on to OAuth.setTimestampAndNonce
     var message = {
-        'action' : 'http://api.yelp.com/v2/search',
+        'action' : '//api.yelp.com/v2/search',
         'method' : 'GET',
         'parameters' : parameters
     };

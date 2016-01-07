@@ -74,7 +74,7 @@
  * As well as using normalize.css, it is often advantageous to remove all
  * margins from certain elements.
  */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300);
+@import url("//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300");
 body,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -372,8 +372,7 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"],
-input[type="reset"],
+html input[type="button"], input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -515,7 +514,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -1056,9 +1057,7 @@ h1 {
       -ms-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
+          transition: transform 300ms ease;
 }
 
 .c-fixed-list.show {
