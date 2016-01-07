@@ -119,6 +119,7 @@ module.exports = function(grunt){
 						'*.{ico,png,txt,yml}',
 						'.htaccess',
 						'img/**/*.{png,jpg,webp,gif,ico,svg}',
+						'css/**/*.{css}',
 						'css/img/*.{png,jpg,gif,svg}',
 						'js/**/*',
 						'**/*.{php,html,twig}'
@@ -181,6 +182,16 @@ module.exports = function(grunt){
 					src: ['css/**/*.css', 'css/**/!*.min.css'],
 				}]
 			}
+		},
+		uglify: {
+			dist: {
+				files: [{
+					expand: true,
+					cwd: '<%= config.app %>',
+					dest: '<%= config.dist %>',
+					src: 'js/**/*.js'
+				}]
+			}
 		}
 	});
 	// END INITCONFIG()
@@ -218,7 +229,7 @@ module.exports = function(grunt){
 		'copy:dist',
 		'processhtml:dist',
 		'cssmin:dist',
+		'uglify:dist',
 		'cachebreaker:dist',
-		'realFavicon'
 	]);
 }
