@@ -13,20 +13,32 @@
     <title>Front-End Nanodegree Neighborhood Map</title>
 
     <!-- CSS -->
-    <script id="loadcss">
-        window.addEventListener("load", function(event) {
-            loadCSS( "css/main.css", document.getElementById("loadcss") );
-        });
-    </script>
-    <noscript><link href="css/main.css" rel="stylesheet"></noscript>
-
-    <!-- JAVASCRIPT -->
-    <script async src="js/modernizr.js"></script>
-    <script async src="js/jquery.min.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
+    <div class="c-sidebar js-sidebar">
+        <div class="c-search-block">
+            <form class="input-group" data-bind="submit: updateYelpResults">
+                <input type="text" class="form-control" data-bind="value: searchTerm">
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button" data-bind="click: updateYelpResults">Search</button>
+                </span>
+            </form>
+        </div>
+        <ul class="c-fixed-list js-search-results"></ul>
+    </div>
 
+    <div class="o-map-canvas" id="map-canvas"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+    <script src="bower_components/knockout/dist/knockout.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+    <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+    <script src="js/app-engine.js"></script>
+    <script src="js/model.js"></script>
 
 </body>
 </html>

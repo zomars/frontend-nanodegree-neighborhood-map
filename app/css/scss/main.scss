@@ -59,10 +59,10 @@
 /**
  * SETTINGS
  */
-@import "../../bower_components/inuit-defaults/settings.defaults";
-@import "settings.global";
-@import "settings.colors";
-@import "../../bower_components/inuit-responsive-settings/settings.responsive";
+@import '../../bower_components/inuit-defaults/settings.defaults';
+@import 'settings.global';
+@import 'settings.colors';
+@import '../../bower_components/inuit-responsive-settings/settings.responsive';
 
 
 
@@ -71,12 +71,12 @@
 /**
  * TOOLS
  */
-@import "../../bower_components/inuit-functions/tools.functions";
-@import "../../bower_components/inuit-mixins/tools.mixins";
-@import "tools.mixins";
-@import "tools.aliases";
-@import "../../bower_components/inuit-tools-widths/tools.widths";
-@import "../../bower_components/inuit-responsive-tools/tools.responsive";
+@import '../../bower_components/inuit-functions/tools.functions';
+@import '../../bower_components/inuit-mixins/tools.mixins';
+@import 'tools.mixins';
+@import 'tools.aliases';
+@import '../../bower_components/inuit-tools-widths/tools.widths';
+@import '../../bower_components/inuit-responsive-tools/tools.responsive';
 
 
 
@@ -85,10 +85,10 @@
 /**
  * GENERIC
  */
-@import "../../bower_components/inuit-reset/generic.reset";
-@import "../../bower_components/inuit-normalize/generic.normalize";
-@import "../../bower_components/inuit-box-sizing/generic.box-sizing";
-@import "../../bower_components/inuit-shared/generic.shared";
+@import '../../bower_components/inuit-reset/generic.reset';
+@import '../../bower_components/inuit-normalize/generic.normalize';
+@import '../../bower_components/inuit-box-sizing/generic.box-sizing';
+@import '../../bower_components/inuit-shared/generic.shared';
 
 
 
@@ -97,11 +97,11 @@
 /**
  * BASE
  */
-@import "../../bower_components/inuit-page/base.page";
-@import "base.page";
-@import "../../bower_components/inuit-headings/base.headings";
-@import "base.type";
-@import "base.links";
+@import '../../bower_components/inuit-page/base.page';
+@import 'base.page';
+@import '../../bower_components/inuit-headings/base.headings';
+@import 'base.type';
+@import 'base.links';
 
 
 
@@ -111,7 +111,12 @@
 /**
  * OBJECTS
  */
-@import "objects.wrappers";
+@import 'objects.wrappers';
+.o-map-canvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
 
 
 
@@ -129,11 +134,142 @@
 /**
  * TRUMPS
  */
-@import "../../bower_components/inuit-clearfix/trumps.clearfix";
-@import "../../bower_components/inuit-widths/trumps.widths";
-@import "../../bower_components/ancla-inuit-widths-responsive/trumps.widths-responsive";
-@import "trumps.show-hide";
+@import '../../bower_components/inuit-clearfix/trumps.clearfix';
+@import '../../bower_components/inuit-widths/trumps.widths';
+@import '../../bower_components/ancla-inuit-widths-responsive/trumps.widths-responsive';
+@import 'trumps.show-hide';
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300);
 
+h1 {
+    height: 120px;
+    margin: auto;
+    padding: 20px 20px 0;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+}
 
+.c-fixed-list,
+.c-search-block {
+    width: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+}
 
+@media (max-width:500px) {
+    .c-fixed-list,
+    .c-search-block {
+        width: 50%;
+    }
+    .c-search-block {
+        width: 100%;
+    }
+}
 
+.c-fixed-list {
+    overflow-y: auto;
+    margin: 0;
+    height: 100%;
+    padding: 60px 0 20px;
+    z-index: 9;
+    transform: translateX(-100%);
+    transition: transform 300ms ease;
+    &.show {
+        transform: translateX(0);
+    }
+    h3 {
+        margin-top: 0;
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.42em;
+        color: $color-yelp;
+        span {
+            border-bottom: 1px solid  $color-yelp;
+        }
+    }
+    p {
+        span {
+            display: block;
+        }
+    }
+    li {
+        margin: 0;
+        padding: 30px 20px 20px;
+        list-style: none;
+        cursor: pointer;
+        border-top: 1px dashed #ccc;
+        &:first-child {
+            border-top: 0;
+        }
+        &:hover {
+            background-color: lightyellow;
+            color: #000;
+        }
+        &.active {
+            background-color: #efefef;
+            color: #000;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .c-fixed-list {
+        li {
+            h3 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.c-search-block {
+    padding: 20px;
+    z-index: 10;
+    small {
+        display: block;
+        margin-top: 10px;
+        cursor: pointer;
+        text-align: right;
+        color: $color-yelp;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.img-container {
+    padding-top: 5px;
+    text-align: center;
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+}
+
+.info_content {
+    p {
+        max-width: 220px;
+    }
+    .review {
+        position: relative;
+        img {
+            display: inline-block;
+            float: left;
+            max-width: 50px;
+            margin-right: 10px;
+        }
+    }
+}
