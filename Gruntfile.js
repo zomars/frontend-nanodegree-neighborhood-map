@@ -5,6 +5,8 @@ module.exports = function(grunt){
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 	var mozjpeg = require('imagemin-mozjpeg');
 
+	// Project configuration.
+	var pkg = require('./package.json');
 
 	// Get Current Working Directory Name
 	var path = require('path');
@@ -90,7 +92,7 @@ module.exports = function(grunt){
 						optimizationLevel: 3,
 						svgoPlugins: [{ removeViewBox: false }],
 						use: [mozjpeg()]
-					  },
+				},
 				files: [{
 					expand: true,                     // Enable dynamic expansion
 					cwd: '<%= config.app %>/',        // Src matches are relative
@@ -192,6 +194,26 @@ module.exports = function(grunt){
 					src: 'js/**/*.js'
 				}]
 			}
+		},
+		buildcontrol: {
+			options: {
+				dir: 'dist',
+				commit: true,
+				push: true,
+				message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+			},
+			pages: {
+				options: {
+						remote: 'git@github.com:zomars/frontend-nanodegree-neighborhood-map.git',
+						branch: 'gh-pages'
+				}
+			},
+			local: {
+				options: {
+					remote: '../',
+					branch: 'gh-pages'
+				}
+			}
 		}
 	});
 	// END INITCONFIG()
@@ -231,5 +253,7 @@ module.exports = function(grunt){
 		'cssmin:dist',
 		'uglify:dist',
 		'cachebreaker:dist',
+		'buildcontrol:local',
+		'buildcontrol:pages'
 	]);
 }
