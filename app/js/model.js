@@ -14,7 +14,7 @@ function yelpBusinessViewModel() {
 		// then run the ajax function to create the yelp list
 		// http://knockoutjs.com/documentation/computedObservables.html
 		ko.computed(function(){
-			yelpAjax('92260', self.searchTerm());
+			getYelpData('92260', self.searchTerm());
 		}, self);
 	};
 }
