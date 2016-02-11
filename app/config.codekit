@@ -182,50 +182,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
-	"\/img\/favicon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3787,
-		"inputAbbreviatedPath": "\/img\/favicon.png",
-		"outputAbbreviatedPath": "\/img\/favicon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/header_1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 34255,
-		"inputAbbreviatedPath": "\/img\/header_1.jpg",
-		"outputAbbreviatedPath": "\/img\/header_1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/header_2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 30260,
-		"inputAbbreviatedPath": "\/img\/header_2.jpg",
-		"outputAbbreviatedPath": "\/img\/header_2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/header_3.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 38846,
-		"inputAbbreviatedPath": "\/img\/header_3.jpg",
-		"outputAbbreviatedPath": "\/img\/header_3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
