@@ -19,4 +19,15 @@ On the project root directory run:
 $ ./install
 ```
 
+Installation
+------------
+
+For local testing run:
+
+```
+$ grunt server
+```
+
+Then access it via: http://localhost:3000
+
 -------
