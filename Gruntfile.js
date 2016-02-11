@@ -205,13 +205,7 @@ module.exports = function(grunt){
 			},
 			pages: {
 				options: {
-						remote: 'git@github.com:zomars/frontend-nanodegree-neighborhood-map.git',
-						branch: 'gh-pages'
-				}
-			},
-			local: {
-				options: {
-					remote: '../',
+					remote: 'git@github.com:zomars/frontend-nanodegree-neighborhood-map.git',
 					branch: 'gh-pages'
 				}
 			}
@@ -254,7 +248,6 @@ module.exports = function(grunt){
 		'cssmin:dist',
 		'uglify:dist',
 		'cachebreaker:dist',
-		'buildcontrol:local',
 		'buildcontrol:pages'
 	]);
 }
