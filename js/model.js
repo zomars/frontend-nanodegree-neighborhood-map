@@ -1,1 +1,1 @@
-function yelpBusinessViewModel(){var a=this;a.searchTerm=ko.observable("Coffee"),a.updateYelpResults=function(){ko.computed(function(){yelpAjax("92260",a.searchTerm())},a)}}ko.applyBindings(new yelpBusinessViewModel);
+function yelpBusinessViewModel(){var a=this;a.searchTerm=ko.observable("Coffee"),a.updateYelpResults=function(){ko.computed(function(){getYelpData("92260",a.searchTerm())},a)}}ko.applyBindings(new yelpBusinessViewModel);
