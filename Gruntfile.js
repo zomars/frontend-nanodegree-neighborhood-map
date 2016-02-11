@@ -120,6 +120,7 @@ module.exports = function(grunt){
 					src: [
 						'*.{ico,png,txt,yml}',
 						'.htaccess',
+						'../.gitignore',
 						'img/**/*.{png,jpg,webp,gif,ico,svg}',
 						'css/**/*.{css}',
 						'css/img/*.{png,jpg,gif,svg}',
